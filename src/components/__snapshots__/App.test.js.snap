@@ -7,6 +7,9 @@ exports[`App component renders correctly 1`] = `
   <h2>
     Gift Giver
   </h2>
+  <div
+    className="gift-list"
+  />
   <button
     className="btn-add"
     onClick={[Function]}
