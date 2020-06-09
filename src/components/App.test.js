@@ -3,10 +3,14 @@ import toJson from "enzyme-to-json";
 import App from './App';
 import {shallow} from 'enzyme';
 
-const wrapper = shallow(<App />);
+const app = shallow(<App/>);
 
-describe('App Component', () => {
+describe('App component', () => {
     it('renders correctly', () => {
-        expect(toJson(wrapper)).toMatchSnapshot();
+        expect(toJson(app)).toMatchSnapshot();
     })
+
+    it('initializes the `state` with an empty list of gifts', () => {
+        expect(app.state().gifts).toEqual([]);
+    });
 })
