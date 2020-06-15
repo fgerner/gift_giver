@@ -1,6 +1,7 @@
 import React, {Component} from 'react';
 import {button} from 'react-bootstrap';
 import './App.css';
+import Gift from "./Gift";
 
 
 class App extends Component {
@@ -14,7 +15,7 @@ class App extends Component {
         const ids = this.state.gifts.map(gift => gift.id);
         const maxId = ids.length > 0 ? Math.max(...ids) : 0;
 
-        gifts.push({ id: maxId + 1});
+        gifts.push({id: maxId + 1});
         this.setState({gifts});
     }
 
@@ -23,13 +24,15 @@ class App extends Component {
             <div className="App">
                 <h2>Gift Giver</h2>
                 <div className={'gift-list'}>
-                    { this.state.gifts.map(gift => {
-                    return (
-                        <div key={gift.id}>
-                        </div>)
-                })}
+                    {
+                        this.state.gifts.map(gift => {
+                            return (
+                                <Gift key={gift.id}/>
+                            )
+                        })
+                    }
                 </div>
-                <button className={'btn-add'} onClick={this.addGift} >Add Gift</button>
+                <button className={'btn-add'} onClick={this.addGift}>Add Gift</button>
             </div>
         );
     }

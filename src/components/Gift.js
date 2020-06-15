@@ -1,5 +1,6 @@
 import React, {Component} from "react";
-import {Form, FormGroup, FormControl, ControlLabel, Button} from "react-bootstrap";
+// eslint-disable-next-line no-unused-vars
+import {Form, FormGroup, FormControl, FormLabel, Button} from "react-bootstrap";
 
 class Gift extends Component {
     constructor() {
@@ -12,10 +13,17 @@ class Gift extends Component {
             <div>
                 <Form>
                     <FormGroup>
-                        <ControlLabel>Person</ControlLabel>
+                        <FormLabel>Person</FormLabel>
                         <FormControl
                             className={'input-person'}
                             onChange={event => this.setState({person: event.target.value})}
+                        />
+                    </FormGroup>
+                    <FormGroup>
+                        <FormLabel>Present</FormLabel>
+                        <FormControl
+                            className={'input-present'}
+                            onChange={event => this.setState({present: event.target.value})}
                         />
                     </FormGroup>
                 </Form>

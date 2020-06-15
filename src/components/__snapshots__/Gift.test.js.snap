@@ -6,11 +6,26 @@ exports[`Gift renders properly 1`] = `
     inline={false}
   >
     <FormGroup>
-      <Component>
+      <FormLabel
+        column={false}
+        srOnly={false}
+      >
         Person
-      </Component>
+      </FormLabel>
       <FormControl
         className="input-person"
+        onChange={[Function]}
+      />
+    </FormGroup>
+    <FormGroup>
+      <FormLabel
+        column={false}
+        srOnly={false}
+      >
+        Present
+      </FormLabel>
+      <FormControl
+        className="input-present"
         onChange={[Function]}
       />
     </FormGroup>
